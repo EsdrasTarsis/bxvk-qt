@@ -35,3 +35,6 @@ HEADERS += \
 FORMS += \
         ui/mainwindow.ui \
         ui/aboutprogram.ui
+
+RESOURCES += \
+    ui/resourcefile.qrc
