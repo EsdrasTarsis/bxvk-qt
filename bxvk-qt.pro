@@ -31,4 +31,5 @@ HEADERS += \
         include/mainwindow.h
 
 FORMS += \
-        ui/mainwindow.ui
+        ui/mainwindow.ui \
+        ui/aboutprogram.ui
