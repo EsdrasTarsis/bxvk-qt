@@ -26,20 +26,62 @@ MainWindow::~MainWindow()
 
 void MainWindow::checkOptions()
 {
-    bool amfnwcb,d3d10oncb,spnvcb,spamcb;
-    amfnwcb=ui->checkBox->isChecked();
-    d3d10oncb=ui->checkBox2->isChecked();
-    spnvcb=ui->checkBox3->isChecked();
-    spamcb=ui->checkBox4->isChecked();
+    QString amfnwcbtext,d3d10oncbtext,spnvcbtext,spamcbtext,dsccbtext,nvapihackcbtext,almemovertext,rawssbotext,eadiscbtext;
+    amfnwcbtext=ui->amfnwcb->text();
+    d3d10oncbtext=ui->d3d10oncb->text();
+    spnvcbtext=ui->spnvcb->text();
+    spamcbtext=ui->spamcb->text();
+    dsccbtext=ui->dsccb->text();
+    nvapihackcbtext=ui->nvapihackcb->text();
+    almemovertext=ui->almemovercb->text();
+    rawssbotext=ui->rawssbocb->text();
+    eadiscbtext=ui->eadiscb->text();
 
-    if(amfnwcb)
-        cout << "Allow Map Flag No Wair Enabled" << endl;
-    if(d3d10oncb)
-        cout << "Direct3D 10 Enabled" << endl;
-    if(spnvcb)
-        cout << "Spoof Nvidia GPU Enabled" << endl;
-    if(spamcb)
-        cout << "Spoof AMD GPU Enabled" << endl;
+    if(ui->amfnwcb->isChecked()) {
+        cout << amfnwcbtext.toUtf8().constData() << " Enabled!" << endl;
+    } else {
+        cout << amfnwcbtext.toUtf8().constData() << " Disabled!" << endl;
+    }
+    if(ui->d3d10oncb->isChecked()) {
+        cout << d3d10oncbtext.toUtf8().constData() << " Enabled!" << endl;
+    } else {
+        cout << d3d10oncbtext.toUtf8().constData() << " Disabled!" << endl;
+    }
+    if(ui->spnvcb->isChecked()) {
+        cout << spnvcbtext.toUtf8().constData() << " Enabled!" << endl;
+    } else {
+        cout << spnvcbtext.toUtf8().constData() << " Disabled!" << endl;
+    }
+    if(ui->spamcb->isChecked()) {
+        cout << spamcbtext.toUtf8().constData() << " Enabled!" << endl;
+    } else {
+        cout << spamcbtext.toUtf8().constData() << " Disabled!" << endl;
+    }
+    if(ui->dsccb->isChecked()) {
+        cout << dsccbtext.toUtf8().constData() << " Enabled!" << endl;
+    } else {
+        cout << dsccbtext.toUtf8().constData() << " Disabled!" << endl;
+    }
+    if(ui->nvapihackcb->isChecked()) {
+        cout << nvapihackcbtext.toUtf8().constData() << " Enabled!" << endl;
+    } else {
+        cout << nvapihackcbtext.toUtf8().constData() << " Disabled!" << endl;
+    }
+    if(ui->almemovercb->isChecked()) {
+        cout << almemovertext.toUtf8().constData() << " Enabled!" << endl;
+    } else {
+        cout << almemovertext.toUtf8().constData() << " Disabled!" << endl;
+    }
+    if(ui->rawssbocb->isChecked()){
+        cout << rawssbotext.toUtf8().constData() << " Enabled!" << endl;
+    } else {
+        cout << rawssbotext.toUtf8().constData() << " Disabled!" << endl;
+    }
+    if(ui->eadiscb->isChecked()){
+        cout << eadiscbtext.toUtf8().constData() << " Enabled!" << endl;
+    } else {
+        cout << eadiscbtext.toUtf8().constData() << " Disabled!" << endl;
+    }
 }
 
 void MainWindow::on_actionLoad_triggered()
@@ -65,7 +107,7 @@ void MainWindow::on_actionExit_triggered()
 void MainWindow::on_actionSave_triggered()
 {
     checkOptions();
-    cout << WarningMSG << "Save feature not implemented!" << endl;
+    cout << WarningMSG << "Save feature have incomplete implementation!" << endl;
 }
 
 void MainWindow::on_actionPreferences_triggered()
